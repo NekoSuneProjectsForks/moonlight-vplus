@@ -27,6 +27,7 @@ jobs:
       - name: Upload development artifacts
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: android-usbip-arm64-development
           path: |
             usbip-diagnostics/build/outputs/apk/debug/*.apk
@@ -59,6 +60,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: android-usbip-test-results
           path: |
             usbip-backend/build/outputs/androidTest-results/
